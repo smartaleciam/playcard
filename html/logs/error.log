@@ -1,0 +1,14 @@
+{"Time :- /"00-00-00/", Machine :- Fish Tales has a Error of :- RFID Error 0xff "}{"Time :- /"00-00-00/", Machine :- Fish Tales has a Error of :- RFID Error 0xff "}{"Time :- /"00-00-00/", Machine :- Fish Tales has a Error of :- RFID Error 0xff "}{"Time :- /"00-00-00/", Machine :- Fish Tales has a Error of :- RFID Error 0xff "}{"Time :- /"time.struct_time(tm_year=2020, tm_mon=6, tm_mday=10, tm_hour=17, tm_min=22, tm_sec=4, tm_wday=2, tm_yday=162, tm_isdst=0)/", Machine :- Fish Tales has a Error of :- RFID Error 0xff "}{"Time :- /"Wed Jun 10 17:25:48 2020/", Machine :- Fish Tales has a Error of :- RFID Error 0xff "}{"Time :- Wed Jun 10 17:27:42 2020, Machine :- Fish Tales has a Error of :- RFID Error 0xff "}{"Time :- Wed Jun 10 17:30:12 2020, Machine :- Fish Tales has a Error of :- RFID Error 0xff "}{"Time :- Wed Jun 10 17:32:36 2020, Machine :- Fish Tales has a Error of :- RFID Error 0xff "}
+{"Time :- Wed Jun 10 17:34:34 2020, Machine :- Fish Tales has a Error of :- RFID Error 0xff "}
+{"Time :- Wed Jun 10 17:35:33 2020, Machine :- Fish Tales has a Error of :- RFID Error 0xff "}{"Time :- Wed Jun 10 17:38:36 2020, Machine :- Fish Tales has a Error of :- RFID Error 0xff "}{"Time :- Wed Jun 10 17:40:03 2020, Machine :- Fish Tales Error Code :- RFID Error 0xff "}{"Time :- Wed Jun 10 17:41:42 2020, Machine :- Fish Tales, Error Code :- RFID Error 0xff "}
+{"Time" : Wed Jun 10 17:46:09 2020, "Machine" : Fish Tales, "Error Code" : RFID Error 0xff "}
+{"Time" : Wed Jun 10 17:49:00 2020, "Machine" : "Fish Tales", "Error Code" : "RFID Error 0xff"}
+{"Time" : "Wed Jun 10 18:01:31 2020", "Machine" : "Fish Tales", "Error Code" : "RFID Error 0xff"}
+{"Time" : "Wed Jun 10 18:26:38 2020", "Machine" : "Fish Tales", "Error Code" : "RFID Error 0xff"}
+{"Time" : "Wed Jun 10 18:28:15 2020", "Machine" : "Fish Tales", "Error Code" : "RFID Error 0xff"}
+{"Time" : "Wed Jun 10 18:33:17 2020", "Machine" : "Fish Tales", "Error Code" : "RFID Error 0xff", "Signal" : "-47"}
+{"Time" : "Wed Jun 10 18:37:38 2020", "Machine" : "Fish Tales", "Error Code" : "RFID Error 0xff", "Signal" : "-47"}
+{"Time" : "Wed Jun 10 23:56:07 2020", "Machine" : "Fish Tales", "Error Code" : "RFID Error 0xff", "Signal" : "-52"}
+{"Time" : "Thu Jun 11 00:09:38 2020", "Machine" : "Fish Tales", "Error Code" : "RFID Error 0xff", "Signal" : "-53"}
+{"Time" : "Thu Jun 11 01:06:54 2020", "Machine" : "Fish Tales", "Error Code" : "RFID Error 0xff", "Signal" : "-48"}
+{"Time" : "Thu Jun 11 01:11:29 2020", "Machine" : "Fish Tales", "Error Code" : "RFID Error 0xff", "Signal" : "-49"}

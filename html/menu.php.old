@@ -1,0 +1,31 @@
+    <nav class="navbar navbar-dark bg-dark">
+<?php   echo "<a class='navbar-brand' href=''>$Title</a>"; ?>
+<div style="color:#ffffff" align="Right" id="timeClock">Clock</div>
+<div style="color:#ffffff" id="butt"></div>
+<script>
+var myVar = setInterval(myTimer,1000);
+function myTimer(){
+    var dat = new Date();
+    var t = dat.toLocaleTimeString();
+    var d = dat.toLocaleDateString();
+    var da = dat.toLocaleString();
+    document.getElementById('timeClock').innerHTML=da;
+}
+
+$(document).ready(function(){ setInterval(function(){  $("#butt").load('read_gpio.php')  }, 1000);  });
+
+
+// $status = shell_exec("/usr/bin/gpio read 26");
+//$status = shell_exec("uptime");
+// $status1 = system("gpio read 26");
+//    document.getElementById('butt').innerHTML=$status;
+
+</script>
+        <ul class="nav nav-pills">
+<!--            <li class="nav-item">  <a href="attendance.php" class="nav-link">Attendance Reports</a>  </li>
+            <li class="nav-item">  <a href="machine.php" class="nav-link">Current Machine Activity</a>  </li>
+            <li class="nav-item">  <a href="users.php" class="nav-link">Current User Activity</a>  </li>
+-->
+            <li class="nav-item">  <a href="admin.php" class="nav-link">Admin Settings</a>  </li>
+        </ul>
+    </nav>

@@ -1,0 +1,63 @@
+<?php
+require "common.php";
+require_once "menu.php";
+include "admin.php";
+?>
+<script>
+$(document).ready(function(){
+    setInterval(function(){
+      var ad_lock = document.getElementById("butt").innerHTML;
+      if ( ad_lock==0) {
+	document.getElementById('Admin_Image').style.display = 'none';
+       } else {
+	document.getElementById('Admin_Image').style.display = 'inline'; };
+    }, 1000);
+});
+</script>
+    <div class="container">
+
+      <div id="Admin_Image" style="display: inline;">
+        <div class="col-md-auto text-center text-md-left pr-md-5">
+<?php echo "<div class='col-md-auto'><center><img height='300' width='400' src='images/$BgImage' /></center></div>"; ?>
+	</div>
+      </div>
+
+        <div id="paynow" style="display: inline;" class="col-md-auto text-md-left pr-md-5">
+	  <div class="card">
+	    <div class="col-md-auto w-70 panel-group">
+	        <div class="panel panel-primary">
+		<table class="table" width="100%" height="330">
+		 <tr><td colspan="4">
+
+
+		<table class="table table-bordered table-striped" style="border-radius:50px border:8px solid" width="95%" height="100%">
+		  <thead class="thead-secondary"><tr><td height="5" colspan="3"><center>Total Cost Activity</center></td></tr></thead>
+		  <tbody><tr><p name="PayNowBill">
+
+			<td width="50">1x</td><td>500hrs Membership - $Name</td><td width="70">$200</td>
+
+		    </p></tr><tr class="info"><td height="5" colspan="2" align=right> Total Cost </td><td width="70">$1260</td>
+		  </tr></tbody>
+		</table>
+
+
+
+		 </td><td width="15%">
+		    <br>
+		    <button type="submit" class="btn btn-primary btn-lg">Pay Cash</button>
+		    <br><br>
+		    <button type="submit" class="btn btn-info btn-lg" disabled>Pay Card</button>
+		    <br><br>
+		    <button type="button" class="btn btn-warning btn-lg" disabled>Clear</button>
+		</td></tr>
+		</table>
+		</div>
+	    </div>
+	  </div>
+	</div>
+
+    </div>
+<?php
+include "footer.php";
+?>
+</html>

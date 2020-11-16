@@ -1,0 +1,32 @@
+<?php 
+
+    $command = escapeshellcmd('sudo python3 /var/www/html/scripts/dhcp_check.py');
+    $output = shell_exec($command);
+//for $info in $output;
+//$users = $database->select("users", ["name", "mobile", "email", "credit", "rfid_uid"],["rfid_uid"=>$output]);
+//foreach ($output as $user){print_r($user); }
+//  $outinfo = "<table class='table' border='1'><thead class='thead-dark'><tr><th>IP Address</th><th>MAC Address</th><th>Expires</th><th>Client Hostname</th></tr></thead></tbody><tr><td>".$user['ip_address']."</td><td>".$user['hardware']."</td><td>".$user['ends']."</td><td>$".$user['client-hostname']."</td></tr></tbody></table>"; print_r($user); }
+
+//print_r($output);
+
+echo "<hr>";
+$test = json_decode($output, true);
+
+//print_r($test);
+//echo count($test);
+
+//foreach($test as $item} {
+//    echo $item[ ip_address'];
+//}
+
+for ($i = 0; $i < count($test); $i++ ) {
+  echo $i;
+  print($test[$i][' ip_address']);
+  echo $test[$i]['Expires'];
+}
+
+
+//echo implode($output);
+echo "<hr>";
+//print_r($output);
+?>

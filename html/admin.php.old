@@ -1,0 +1,247 @@
+<?php
+require 'common.php';
+
+//Grab all the users from our database
+$users = $database->select("users", ['id','name','mobile','email','address','address2','birthdate','credit','rfid_uid']);
+
+//$.ajaxSend(function() { $(".loading").show(); });
+//$.ajaxComplete(function() { $(".loading").hide(); });
+?>
+
+<script>
+
+function Delete_User(id) {
+    alert("Are you sure?");
+    $.ajax({
+    url: "-DeleteUser.php",
+    data: {value: id},
+    type: "POST",
+    success: function(result) { alert(result); $users = $database->select("users", ['id','name','mobile','email','address','address2','birthdate','credit','rfid_uid']);  }
+    beforeSend: function() { $(".loading").show(); },
+    complete: function() { $(".loading").hide(); }
+  });
+};
+
+function ClearLcd1(){
+alert('clear lcd');
+  $('#container').load("-clear_lcd.php");
+  console.log();
+alert('completed task');
+};
+
+</script>
+
+    <nav class="navbar navbar-dark bg-dark">
+    <?php   echo "<a class='navbar-brand' href='.'>$Title</a>"; ?>
+    <div style="color:#ffffff" align="Right" id="timeClock">Clock</div>
+<script>
+var myVar = setInterval(myTimer,1000);
+function myTimer(){
+    var dat = new Date();
+    var t = dat.toLocaleTimeString();  //time string
+    var d = dat.toLocaleDateString();  //date string
+    var da = dat.toLocaleString();     //date + time string
+    document.getElementById('timeClock').innerHTML=da;
+}
+</script>
+        <ul class="nav nav-pills">
+            <li class="nav-item">  <a href="attendance.php" class="nav-link">Attendance Reports</a>  </li>
+            <li class="nav-item">  <a href="machine.php" class="nav-link">Current Machine Activity</a>  </li>
+            <li class="nav-item">  <a href="users.php" class="nav-link">Current User Activity</a>  </li>
+            <li class="nav-item">  <a href="admin.php" class="nav-link active">Admin Settings</a>  </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+	<div class="navbar navbar-light" style="background-color: #e3f2fd;">
+	    <div class="nav-item"> <button type="button" class="btn btn-dark bg-warning" id="lcdbacklight" onclick="LcdBacklight()">LCD ON</button> </div>
+
+	    <div class="dropdown">
+	      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMachines" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	        Machine Options  </button>
+	      <div class="dropdown-menu" aria-labelledby="dropdownMachines">
+		<center> <button type="button" class="btn btn-dark bg-warning" onclick="Admin_Buttons('StatsMachines')">Machine Stats</button></center>
+		<center> <button type="button" class="btn btn-dark bg-warning" onclick="Admin_Buttons('EditMachines')">Edit Machines</button></center>
+	        <div class="dropdown-divider"></div>
+	        <center> <button type="button" class="btn btn-dark bg-warning" onclick="Admin_Buttons('CalabrateMachines')">Calabrate Machines</button></center>
+	        <center> <button type="button" class="btn btn-dark bg-warning" onclick="Scan_DHCP()">Scan for Active DHCP leases</button></center>
+	      </div>
+	    </div>
+
+	    <div class="dropdown">
+	      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMembers" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	        Members Options  </button>
+	      <div class="dropdown-menu" aria-labelledby="dropdownMembers">
+	        <center> <button type="button" class="btn btn-dark bg-warning" onclick="Admin_Buttons('ViewUsers')">View Users</button></center>
+	        <center> <button type="button" class="btn btn-dark bg-warning" onclick="Admin_Buttons('MembershipEdit')">-Edit Members</button></center>
+	        <center> <button type="button" class="btn btn-dark bg-warning" onclick="Admin_Buttons()">-Browse Members</button></center>
+	        <div class="dropdown-divider"></div>
+	        <center> <button type="button" class="btn btn-dark bg-warning" onclick="Admin_Buttons('MembershipCredits')">Total Membership Credits</button></center>
+	      </div>
+	    </div>
+
+            <div class="nav-item"> <button type="button" class="btn btn-dark bg-warning" onclick="Admin_Buttons('IncomeReports')">Income Reports</button> </div>
+
+	    <div class="dropdown">
+	      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownSettings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	        settings  </button>
+	      <div class="dropdown-menu" aria-labelledby="dropdownSettings">
+	        <center> <button type="button" class="btn btn-dark bg-warning" onclick="Admin_Buttons()">-----</button></center>
+	        <center> <button type="button" class="btn btn-dark bg-warning" onclick="Admin_Buttons()">-----</button></center>
+	        <center> <button type="button" class="btn btn-dark bg-warning" onclick="Admin_Buttons()">-----</button></center>
+	        <div class="dropdown-divider"></div>
+		<center> <button type="button" class="btn btn-dark bg-warning" data-toggle="modal" data-target="#SiteSettings">Edit Site Settings</button>  </center>
+                <center> <a href="terminal.php" class="btn btn-dark bg-warning">Terminal</a> </center>
+	      </div>
+	    </div>
+
+<script>
+
+function Scan_DHCP() {
+    $.ajax({
+    url: "-ScanDHCP.php",
+    success: function(result) { document.getElementById('ViewDHCP').innerHTML = result; },
+    beforeSend: function() { $(".loading").show();  document.getElementById('ViewDHCP').style.display = 'inline'; },
+    complete: function() { $(".loading").hide(); }
+  });
+};
+
+function LcdBacklight() {
+  var x = document.getElementById("lcdbacklight");
+  if (x.innerHTML === "LCD ON") {  x.innerHTML = "LCD OFF";  BL = 1;  } else {  x.innerHTML = "LCD ON";  BL = 0;   }
+    $.ajax({
+    url: "-LcdBacklight.php",
+    data: {value: BL},
+    type: "POST",
+    success: function(result) { },
+    beforeSend: function() { $(".loading").show(); },
+    complete: function() { $(".loading").hide(); }
+  });
+};
+
+function Admin_Buttons($val) {
+    var x = document.getElementById($val).style.display;
+    if (x === 'none') {   document.getElementById($val).style.display = 'inline';   } else { document.getElementById($val).style.display = 'none';    }
+change};
+
+function Add_DHCP(mac) {
+  $.ajax({
+    url: "-InsertDHCP.php",
+    data: {
+      mac_address: mac,
+      machine_name: document.getElementById('mac_add').elements.namedItem('machine_name').value,
+      machine_value: document.getElementById('mac_add').elements.namedItem('machine_value').value
+      },
+    type: "POST",
+    success: function(result) { alert("Added"); },
+    complete: function() { document.getElementById('mac_add').submit(); }
+  });
+};
+
+</script>
+
+</script>
+
+	</div>
+
+	<div id="EditMachines" style="display: none;">
+	    <div class="navbar navbar-dark bg-primary"><h4>Edit Machines</h4></div>
+	</div>
+
+	<div id="MembershipCredits" style="display: none;">
+	    <div class="navbar navbar-dark bg-primary"><h4>View Membership Credits</h4></div>
+	</div>
+
+	<div id="IncomeReports" style="display: none;">
+	    <div class="navbar navbar-dark bg-primary"><h4>View Income Reports</h4></div>
+<table class="table table-striped">
+<tbody>
+<?php
+foreach($users as $user) {
+  echo '<tr>';
+  echo '<td scope="row">'.$user["id"].'</td>';
+  echo '<td>'.$user["name"].'</td>';
+  echo '</tr>';
+}
+ ?>
+</tbody>
+</table>
+	</div>
+
+    <div id="ViewUsers" style="display: none;">
+    <?php echo '<div class="navbar navbar-dark bg-primary"><h4>View all Users</h4></div>';
+	  foreach($users as $user) {
+	    echo '<div class="navbar navbar-light" style="background-color: #e3f2fd;">';
+	    echo '<a class="navbar-brand navbar-toggler toggler-example" data-toggle="collapse" data-target="#navbarSupportedContent'.$user['id'].'">Name - '.$user['name'].'</a>';
+	    echo '<button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent'.$user['id'].'" aria-controls="navbarSupportedContent'.$user['id'].'" aria-expanded="false" aria-label="Toggle navigation">';
+	    echo '<span class="dark-blue-text">+</span></button>';
+
+    	    echo '<div class="collapse navbar-collapse" id="navbarSupportedContent'.$user['id'].'">';
+	    echo '<ul class="navbar-nav mr-auto">';
+    	    echo '<li class="nav-item" onchange="">Sys ID - <b>'. $user['id'].'</b></li>';
+    	    echo '<li class="nav-item">Name - <b>'. $user['name'].'</b></li>';
+    	    echo '<li class="nav-item">Email Address - <b>'. $user['email'].'</b></li>';
+    	    echo '<li class="nav-item">Mailing Address - <b>'. $user['address'].'</b></li>';
+    	    echo '<li class="nav-item">Town/Suburb - <b>'. $user['address2'].'</b></li>';
+    	    echo '<li class="nav-item">Birthdate - <b>'. $user['birthdate'].'</b></li>';
+    	    echo '<li class="nav-item">Credit Amount - <b>$'. $user['credit'].'</b></li>';
+    	    echo '<li class="nav-item">RFID - '. $user['rfid_uid'].'</li>';
+	    echo '<button class="nav-item" type="button" onclick="Delete_User('.$user['id'].')"><font color="red">-Delete-User-</font></button>';
+	    echo '</ui></div>';
+	    echo '</div>';
+        }
+  ?>
+    </div>
+
+    <div id="ViewDHCP" style="display: none;">
+    <?php
+//	 echo '<div class="navbar navbar-dark bg-primary"><h4>View Active DHCP leases</h4></div>';
+//	  foreach($users as $user) {
+//	    echo '<div class="navbar navbar-light" style="background-color: #e3f2fd;">';
+//	    echo '<a class="navbar-brand navbar-toggler toggler-example" data-toggle="collapse" data-target="#navbarSupportedContent'.$user['id'].'">Name - '.$user['name'].'</a>';
+//	    echo '<button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent'.$user['id'].'" aria-controls="navbarSupportedContent'.$user['id'].'" aria-expanded="false" aria-label="Toggle navigation">';
+//	    echo '<span class="dark-blue-text">+</span></button>';
+
+//    	    echo '<div class="collapse navbar-collapse" id="navbarSupportedContent'.$user['id'].'">';
+//	    echo '<ul class="navbar-nav mr-auto">';
+//    	    echo '<li class="nav-item">Sys ID - <b>'. $user['id'].'</b></li>';
+//    	    echo '<li class="nav-item">Name - <b>'. $user['name'].'</b></li>';
+//    	    echo '<li class="nav-item">Email Address - <b>'. $user['email'].'</b></li>';
+//    	    echo '<li class="nav-item">Mailing Address - <b>'. $user['address'].'</b></li>';
+//	    echo '<button class="nav-item" type="button" onclick="Delete_User('.$user['id'].')"><font color="red">-Delete-User-</font></button>';
+//	    echo '</ui></div>';
+//	    echo '</div>';
+//        }
+  ?>
+    </div>
+
+<!-- Modal Popup - Site Settings -->
+    <div class="modal" id="SiteSettings" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+	<div class="modal-content">
+	  <div class="modal-header bg-danger text-body">
+	    <h2 class="modal-title" id="exampleModalLabel">Change Website settings</h2>
+	    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	      <span aria-hidden="true">&times;</span>
+	    </button>
+	  </div>
+	  <div class="modal-body">
+	<?php   echo "<div class='input group'>Site Title -<input id='SiteTitle' type='text' class='form control' name='SiteTitle' placeholder='$Title'></div>"; ?>
+	<?php   echo "<div class='input group'>Group Play Hours -<input id='GroupPlay' type='text' class='form control' name='GroupPlay' placeholder='$GroupPlayHours'></div>"; ?>
+	<?php   echo "<div class='input group'>LCD Backlight timer -<input id='LCDtimer' type='text' class='form control' name='LCDtimerGroupPlay' placeholder='$LCDtimer'></div>"; ?>
+	<?php   echo "<div class='input group'>Group Play Hours -<input id='GroupPlay' type='text' class='form control' name='GroupPlay' placeholder='$GroupPlayHours'></div>"; ?>
+	  </div>
+	  <div class="modal-footer">
+	    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+	    <button type="button" class="btn btn-primary" disabled >Submit Changes</button>
+	  </div>
+	</div>
+     </div>
+   </div>
+
+<?php
+include "footer.php";
+?>
+</div>
+</html>
