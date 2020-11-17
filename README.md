@@ -21,5 +21,5 @@ Rasp Pi can also have internet access (via its built in Wifi to connect to Inter
 # Playcard - Machine Rfid System
 rfid/oled/pixel ring scanner goes on Machine to replace coin mech or to assist the coin mech
 
-
+#
 How it all works.. Pure Magic at the moment..More Documentation to come
