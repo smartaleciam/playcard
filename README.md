@@ -1,4 +1,4 @@
-# playcard - Master Brain System
+# Playcard - Master Brain System
 
 Developing a new type of system due to
 1. Loads of wires from the Rasp pi
@@ -11,7 +11,7 @@ Now able to leave rasp pi under counter in secure location
 Access to rasp pi is via the LAN DHCP network it create's an manages, using a AP for Wifi to all the rfid scanners
 Rasp Pi can also have internet access (via its built in Wifi to connect to Internet Hotspot) (for online updates an online backups)
 
-# playcard - Machine Rfid payment System
+# Playcard - Machine Rfid payment System
 rfid/oled/pixel ring scanner goes on Machine to replace coin mech or to assist the coin mech
 
 
