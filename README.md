@@ -4,12 +4,13 @@ Developing a new type of system due to
 1. Loads of wires from the Rasp pi
 2. Needing Rasp pi with rfid scanner close to public (theft of rasp pi would loose everything)
 
-Result, use the built in rasp pi 3+ bluetooth.
+Result, use the built in rasp pi 3+ Bluetooth.
+
 Multi bluetooth module systems could be,
-Rfid_Scanner (sits next to monitor),
-Till (bluetooth module to trigger till),
-Card_Dispencer (card storer / rfid scanner),
-LED Sign control (general messages etc)
+1. Rfid_Scanner (sits next to monitor),
+2. Till (bluetooth module to trigger till),
+3. Card_Dispencer (card storer / rfid scanner),
+4. LED Sign control (general messages etc)
 
 Now able to leave the rasp pi in a secure location (within bluetooth distance)
 
