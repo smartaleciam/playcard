@@ -18,8 +18,8 @@ Access to Rasp Pi Webpage is setup on 192.168.10.1 an is connected to the LAN DH
 Use's a Wifi Access Point to talk to all the Rfid scanners,
 Rasp Pi can also have internet access (via its built in Wifi to connect to Internet Hotspot) (for online updates an online backups)
 
-# Playcard - Machine Rfid payment System
+# Playcard - Machine Rfid System
 rfid/oled/pixel ring scanner goes on Machine to replace coin mech or to assist the coin mech
 
 
-# How it all works.. Pure Magic at the moment..More Documentation to come
+How it all works.. Pure Magic at the moment..More Documentation to come
