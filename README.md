@@ -26,4 +26,5 @@ How it all works.. Pure Magic at the moment..More Documentation to come
 
 # How to install on a rasp pi with rasbian
 wget https://github.com/smartaleciam/playcard/Install_PlayCard_Packages.sh
+
 sudo ./Install_PlayCard_Packages.sh
