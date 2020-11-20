@@ -11,7 +11,7 @@ Multi bluetooth module systems could be,
 2. Till (bluetooth module to trigger till),
 3. Card_Dispencer (card storer / rfid scanner),
 4. LED Sign control (general messages etc)
-
+5. Mp3 Player Anouncement (Advertising messages or Fire Alerts etc)
 Now able to leave the rasp pi in a secure location (within bluetooth distance)
 
 Access to Rasp Pi Webpage is setup on 192.168.10.1 an is connected to the LAN DHCP network that it create's an manages,
