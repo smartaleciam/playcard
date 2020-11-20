@@ -16,8 +16,9 @@ Multi bluetooth module systems could be,
 Now able to leave the rasp pi in a secure location (within bluetooth distance)
 
 Access to Rasp Pi Webpage is setup on 192.168.10.1 an is connected to the LAN DHCP network that it create's an manages,
-Use's a Wifi Access Point to talk to all the Rfid scanners,
-Rasp Pi can also have internet access (via its built in Wifi to connect to Internet Hotspot) (for online updates an online backups)
+Using Wifi Access Point's to talk to all the Rfid scanners.
+
+The Rasp Pi can also have Internet Access (via its built in Wifi to connect to Internet Hotspot) (for online updates an online backups)
 
 # Playcard - Machine Rfid System
 rfid/oled/pixel ring scanner goes on Machine to replace coin mech or to assist the coin mech
