@@ -22,11 +22,11 @@ Using Wifi Access Point's on that network to talk to all the Rfid scanners.
 The Rasp Pi can also have Internet Access (via its built in Wifi to connect to a Internet Hotspot) (for online Updates an Backups)
 
 # Playcard - Machine Rfid System
-rfid/oled/pixel ring scanner goes on Machine to replace coin mech or to assist the coin mech
+rfid + oled + pixel ring scanner, goes on a Machine to replace coin mech or to assist the coin mech
 
 #
 How it all works.. Pure Magic at the moment..More Documentation to come
-
+#
 # How to install on a rasp pi with rasbian
 wget http://www.smartaleclights.com.au/downloads/Install_PlayCard_Packages.sh
 
