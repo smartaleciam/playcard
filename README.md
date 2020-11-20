@@ -27,8 +27,6 @@ rfid/oled/pixel ring scanner goes on Machine to replace coin mech or to assist t
 #
 How it all works.. Pure Magic at the moment..More Documentation to come
 
-Still learning how github works, so github code is only for viewing an not the master scripts/files yet
-
 # How to install on a rasp pi with rasbian
 wget http://www.smartaleclights.com.au/downloads/Install_PlayCard_Packages.sh
 
