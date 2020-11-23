@@ -117,6 +117,7 @@ function Scan_DHCP() {
 -->
                 <center> <button type="button" class="btn btn-dark bg-warning" data-toggle="modal" data-target="#SiteSettings">Edit Site Settings</button>  </center>
 	        <div class="dropdown-divider"></div>
+                <center> <button type="button" class="btn btn-dark bg-warning" data-toggle="modal" data-target="#TroubleShoot">TroubleShooting</button>  </center>
 	        <center> <button type="button" class="btn btn-dark bg-warning" onclick="document.getElementById('PhAdm').src='https://smartlink/phpmyadmin'; Admin_Buttons('PHPmyAdmin')">PHPmyAdmin</button></center>
 	        <center> <button type="button" class="btn btn-dark bg-warning" onclick="document.getElementById('WifiAP').src='http://192.168.10.2'; Admin_Buttons('WIFIaccessPOINT');" title="192.168.10.2">Wifi AP #1</button></center>
 	        <center> <button type="button" class="btn btn-dark bg-warning" onclick="document.getElementById('WifiAP').src='http://192.168.10.3'; Admin_Buttons('WIFIaccessPOINT');" title="192.168.10.3">Wifi AP #2</button></center>

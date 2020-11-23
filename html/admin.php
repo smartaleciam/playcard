@@ -390,3 +390,33 @@ $(".custom-file-input").on("change", function() {
 	</div>
   </div>
 </div>
+
+<!-- Modal Popup - TroubleShoot -->
+<div class="modal" id="TroubleShoot" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+	<div class="modal-header bg-danger text-body" style="height: 65px;">
+	    <h2 class="modal-title" id="exampleModalLabel">TroubleShooting</h2>
+	    <button type="button" class="close" data-dismiss="modal"caria-label="Close">
+	    <span aria-hidden="true">&times;</span>
+	    </button>
+	</div>
+
+	<div class="modal-body" style="overflow-y: scroll; max-height:85%; margin-top:50px; margin-bottom:50px;" role="document">
+	<?php require_once('troubleshootingCommands.php'); ?>
+	    <div style="overflow: hidden; padding: 10px;">
+	    <div class="clear"></div>
+		<?php
+		foreach ($commands as $title => $command)
+		{
+		echo "<h4>";  echo $title . ':&nbsp;&nbsp;&nbsp;&nbsp;' . $command;  echo "</h4>";
+		echo "<pre>";  echo $results[$command];  echo "</pre><hr>";
+		}
+		?>
+	    </div>
+	</div>
+
+    </div>
+  </div>
+</div>

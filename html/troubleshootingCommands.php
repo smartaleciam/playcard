@@ -1,7 +1,4 @@
 <?php
-//require_once('config.php');
-//require_once('common.php');
-
 putenv("PATH=/bin:/usr/bin:/sbin:/usr/sbin");
 
 $rtcDevice = "/dev/rtc0";
@@ -14,7 +11,7 @@ if ($settings['Platform'] == "BeagleBone Black") {
             $rtcDevice = "/dev/rtc1";
         }
     }
-	$i2cDevice = "2";
+    $i2cDevice = "2";
 }
 
 $commands = array(
@@ -64,16 +61,22 @@ $commands = array(
 	// i2c
 	'i2cdetect'          => $SUDO . ' i2cdetect -y -r ' . $i2cDevice,
 
+	// bluetooth
+	'bluetooth'          => 'hciconfig',
+
+	// bluetooth pairs
+	'Bluetooth Pairs'    => 'bluez-list-device list',
+
 	// Processes
-	'Processes'          => 'ps -edaf --forest',  // Keep this last since it is so long
+	'Processes'          => 'ps -edaf --forest'  // Keep this last since it is so long
 
     // Boot
-    'FPP Cape Detect Log'   => $SUDO . ' journalctl -u fppcapedetect ',
-    'FPP RTC Log'          => $SUDO . ' journalctl -u fpprtc ',
-    'FPP Init Log'          => $SUDO . ' journalctl -u fppinit ',
-    'FPP Post Network Logs' => $SUDO . ' journalctl -u fpp_postnetwork ',
-    'FPP OLED Logs' => $SUDO . ' journalctl -u fppoled ',
-    'FPP FPPD Logs' => $SUDO . ' journalctl -u fppd '
+//    'FPP Cape Detect Log'   => $SUDO . ' journalctl -u fppcapedetect ',
+//    'FPP RTC Log'          => $SUDO . ' journalctl -u fpprtc ',
+//    'FPP Init Log'          => $SUDO . ' journalctl -u fppinit ',
+//    'FPP Post Network Logs' => $SUDO . ' journalctl -u fpp_postnetwork ',
+//    'FPP OLED Logs' => $SUDO . ' journalctl -u fppoled ',
+//    'FPP FPPD Logs' => $SUDO . ' journalctl -u fppd '
 	);
 
 $results = array();
