@@ -47,5 +47,5 @@ or
 
 wget https://raw.githubusercontent.com/smartaleciam/playcard/main/Install_PlayCard_Packages.sh  for the latest version
 
-chmod Install_PlayCard_Packages.sh
+chmod -R 744 Install_PlayCard_Packages.sh
 sudo ./Install_PlayCard_Packages.sh
