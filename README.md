@@ -29,8 +29,6 @@ How it all works.. Pure Magic at the moment..More Documentation to come
 
 Still learning how github works, so github code is only for viewing an not the master scripts/files yet
 
-=======
-
 Using Wifi Access Point's on that network to talk to all the Rfid scanners.
 
 The Rasp Pi can also have Internet Access (via its built in Wifi to connect to a Internet Hotspot) (for online Updates an Backups)
@@ -41,7 +39,7 @@ rfid + oled + pixel ring scanner, goes on a Machine to replace coin mech or to a
 #
 How it all works.. Pure Magic at the moment..More Documentation to come
 #
->>>>>>> main
+
 # How to install on a rasp pi with rasbian
 wget http://www.smartaleclights.com.au/downloads/Install_PlayCard_Packages.sh
 or
