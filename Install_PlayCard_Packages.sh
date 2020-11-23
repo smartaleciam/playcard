@@ -13,10 +13,17 @@ phpenmod mysqli
 service apache2 restart
 
 # ======== Get and Install Latest WedPage Code ===========
-wget http://www.smartaleclights.com.au/downloads/Arcade_Code.tar.gz
-tar zxvf Arcade_Code.tar.gz
-rm Arcade_Code.tar.gz
-cd Arcade_Code
+
+#https://github.com/smartaleciam/playcard.git
+wget https://github.com/smartaleciam/playcard/archive/main.zip
+tar zxvf playcard-main.zip
+rm playcard-main.zip
+cd playcard-main
+
+#wget http://www.smartaleclights.com.au/downloads/Arcade_Code.tar.gz
+#tar zxvf Arcade_Code.tar.gz
+#rm Arcade_Code.tar.gz
+#cd Arcade_Code
 rsync -avx html /var/www/html
 #ls -lh /var/www/
 chown -R pi:www-data /var/www/html/
