@@ -14,7 +14,6 @@ service apache2 restart
 
 # ======== Get and Install Latest WedPage Code ===========
 
-#https://github.com/smartaleciam/playcard.git
 wget https://github.com/smartaleciam/playcard/archive/main.zip
 unzip main.zip
 rm main.zip
@@ -32,7 +31,7 @@ apt install --no-install-recommends xserver-xorg x11-xserver-utils xinit openbox
 mv autostart /etc/X11/openbox/autostart
 
 # ======== Setup Install Database Code ===========
-#clear
+clear
 echo "Do you Wish to Install the \"PlayCard\" Default Database Y/N"
 read answer
 case $answer in
@@ -257,7 +256,7 @@ python3 setup.py install
 #   rfcomm bind rfcomm2 <device's MAC>  #=====bluetooth Monitor_Scanner 
 
 # ==============Blue Tooth Discovery - Connection Procedure ===============
-sudo bluetoothctl 
+#sudo bluetoothctl 
 
 #[bluetooth]# agent on
 #[bluetooth]# scan on
