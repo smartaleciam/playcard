@@ -42,8 +42,11 @@ How it all works.. Pure Magic at the moment..More Documentation to come
 
 # How to install on a rasp pi with rasbian
 wget http://www.smartaleclights.com.au/downloads/Install_PlayCard_Packages.sh
+
 or
+
 wget https://raw.githubusercontent.com/smartaleciam/playcard/main/Install_PlayCard_Packages.sh
+
 for the latest version
 
 sudo ./Install_PlayCard_Packages.sh
