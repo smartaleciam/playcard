@@ -27,18 +27,9 @@ rfid/oled/pixel ring scanner goes on Machine to replace coin mech or to assist t
 #
 How it all works.. Pure Magic at the moment..More Documentation to come
 
-Still learning how github works, so github code is only for viewing an not the master scripts/files yet
-
 Using Wifi Access Point's on that network to talk to all the Rfid scanners.
 
 The Rasp Pi can also have Internet Access (via its built in Wifi to connect to a Internet Hotspot) (for online Updates an Backups)
-
-# Playcard - Machine Rfid System
-rfid + oled + pixel ring scanner, goes on a Machine to replace coin mech or to assist the coin mech
-
-#
-How it all works.. Pure Magic at the moment..More Documentation to come
-#
 
 # How to install on a rasp pi with rasbian
 wget https://raw.githubusercontent.com/smartaleciam/playcard/main/Install_PlayCard_Packages.sh  for the latest version
