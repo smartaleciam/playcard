@@ -4,13 +4,13 @@
 # Install Packages
 PACKAGES="apache2 php mariadb-server php-mysql phpmyadmin bluetooth pi-bluetooth bluez blueman libbluetooth-dev isc-dhcp-server build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libc6-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev tar wget vim mc python3 python3-dev python3-setuptools-git python3-mysql.connector python3-pip python3-serial"
 
-#apt update
-#apt upgrade
-#apt install $PACKAGES -y
-#pip3 install pyserial
-#mysql_secure_installation
-#phpenmod mysqli
-#service apache2 restart
+apt update
+apt upgrade
+apt install $PACKAGES -y
+pip3 install pyserial
+mysql_secure_installation
+phpenmod mysqli
+service apache2 restart
 
 # ======== Get and Install Latest WedPage Code ===========
 wget http://www.smartaleclights.com.au/downloads/Arcade_Code.tar.gz
@@ -25,8 +25,8 @@ chmod -R 770 /var/www/html/
 
 # ==================Setup Chrome an Kiosk Mode==================================
 
-#apt install --no-install-recommends xserver-xorg x11-xserver-utils xinit openbox chromium-browser -y
-#mv autostart /etc/X11/openbox/autostart
+apt install --no-install-recommends xserver-xorg x11-xserver-utils xinit openbox chromium-browser -y
+mv autostart /etc/X11/openbox/autostart
 
 # ======== Setup Install Database Code ===========
 #clear
@@ -241,14 +241,15 @@ systemctl enable --now bluetooth
     fi
 
 # =========================================================
-#wget https://github.com/pybluez/pybluez/archive/master.tar.gz
-#tar zxf master.tar.gz
-#cd pybluez-master
-#python3 setup.py install
+cd /home/pi
+wget https://github.com/pybluez/pybluez/archive/master.tar.gz
+tar zxf master.tar.gz
+cd pybluez-master
+python3 setup.py install
 
 # =======find Bluetooth Mac Address's ========
 
-   rfcomm bind rfcomm0 00:20:10:08:39:EA  #=====bluetooth Card_Dispencer 
+#   rfcomm bind rfcomm0 00:20:10:08:39:EA  #=====bluetooth Card_Dispencer 
 #   rfcomm bind rfcomm1 <device's MAC>  #=====bluetooth Till_Draw
 #   rfcomm bind rfcomm2 <device's MAC>  #=====bluetooth Monitor_Scanner 
 
