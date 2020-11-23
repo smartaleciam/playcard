@@ -5,7 +5,7 @@
 PACKAGES="apache2 php mariadb-server php-mysql phpmyadmin bluetooth pi-bluetooth bluez blueman libbluetooth-dev isc-dhcp-server build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libc6-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev tar wget vim mc python3 python3-dev python3-setuptools-git python3-mysql.connector python3-pip python3-serial"
 
 apt update
-apt upgrade
+apt upgrade -y
 apt install $PACKAGES -y
 pip3 install pyserial
 mysql_secure_installation
@@ -261,10 +261,11 @@ python3 setup.py install
 #   rfcomm bind rfcomm2 <device's MAC>  #=====bluetooth Monitor_Scanner 
 
 # ==============Blue Tooth Discovery - Connection Procedure ===============
-#sudo bluetoothctl 
+sudo bluetoothctl 
 
 #[bluetooth]# agent on
 #[bluetooth]# scan on
+
 #  Discovery started
 #  [NEW] Device 00:20:10:08:39:EA 
 
