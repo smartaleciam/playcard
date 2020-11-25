@@ -38,7 +38,7 @@ Now able to leave the rasp pi in a secure location (within bluetooth distance)
 - GST Calculation Switch (Include GST in price or not)
 
 # How to install 
-- Download a copy of 'Rasbian lite' onto a SD card. `https://www.raspberrypi.org/software/`
+Download a copy of 'Rasbian lite' onto a SD card. `https://www.raspberrypi.org/software/`
 ```
 wget https://raw.githubusercontent.com/smartaleciam/playcard/main/Install_PlayCard_Packages.sh
 chmod -R 744 Install_PlayCard_Packages.sh
@@ -46,7 +46,7 @@ sudo ./Install_PlayCard_Packages.sh
 ```
 
 ### About Me
-This is sort of a slow project due to the fact im learning many new things, developing a faulting along the way.
+This is sort of a slow project due to the fact im learning many new things, while developing and faulting along the way.
 
 # Rough Costs
 - Each `Rfid Machine Scanner` comes in around $25 each per machine
