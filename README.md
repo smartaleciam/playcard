@@ -32,8 +32,10 @@ Using Wifi Access Point's on that network to talk to all the Rfid scanners.
 The Rasp Pi can also have Internet Access (via its built in Wifi to connect to a Internet Hotspot) (for online Updates an Backups)
 
 # How to install on a rasp pi with rasbian
+...
 wget https://raw.githubusercontent.com/smartaleciam/playcard/main/Install_PlayCard_Packages.sh  for the latest version
 
 chmod -R 744 Install_PlayCard_Packages.sh
 
 sudo ./Install_PlayCard_Packages.sh
+...
