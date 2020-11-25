@@ -4,14 +4,14 @@ Currently Developing a new type of system due to
 1. Loads of wires from the Rasp pi
 2. Needing Rasp pi with rfid scanner close to public (theft of rasp pi would loose everything)
 
-Result, use the built in rasp pi 3+ Bluetooth.
+Result, use the built in Bluetooth for modules. (Rasp pi 3+ & 4 models)
 
-Multi bluetooth module systems could be,
-- Rfid_Scanner (sits next to monitor),
+Some of the different bluetooth module's could be,
+- Rfid_Scanner (Scan's Rfid Card, Sits next to monitor),
 - Till (bluetooth module to trigger till),
-- Card_Dispencer (card storer / rfid scanner),
+- Card_Dispencer (Card Storage Dispencer & Rfid scanner in one),
 - LED Sign control (general messages etc)
-- Mp3 Player Anouncement (Advertising messages or Fire Alerts etc)
+- Mp3 Player Anouncement (Advertising Messages or Fire Alerts etc)
 
 Now able to leave the rasp pi in a secure location (within bluetooth distance)
 
@@ -32,7 +32,7 @@ Now able to leave the rasp pi in a secure location (within bluetooth distance)
 ### Extra's Bits
 - Timed Card function (Countdowns from time of purchase)
 - Booking System (Keeps track of Bookings)
-- MemberShip Cards have photo attached in system (via webcam)
+- Membership Cards have photo ID attached in system (via Webcam Snapshot)
 - % Discount System (after a member has spent X dollars in past)
 - GST Calculation Switch (Include GST in price or not)
 
@@ -44,3 +44,10 @@ chmod -R 744 Install_PlayCard_Packages.sh
 sudo ./Install_PlayCard_Packages.sh
 ```
 
+### About Me
+This is sort of a slow project due to the fact im learning many new things, developing a faulting along the way.
+
+# Rough Costs
+- Each `Rfid Machine Scanner` comes in around $25 each per machine
+- The `System Brain` is a Rasp Pi 3+ $70
+- Each `Bluetooth System Brain module` would be around $20 depending on what it does
