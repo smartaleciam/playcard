@@ -13,10 +13,10 @@ Multi bluetooth module systems could be,
 - LED Sign control (general messages etc)
 - Mp3 Player Anouncement (Advertising messages or Fire Alerts etc)
 
-
 Now able to leave the rasp pi in a secure location (within bluetooth distance)
 
-Access to Rasp Pi Webpage is setup on 192.168.10.1 an is connected to the LAN DHCP network that it create's an manages,
+Access to the Webpage is via https://playcard an it's LAN IP is setup on 192.168.10.1, The System also creates its own DHCP LAN network for RFID Wifi Device's.
+Access to the Internet is enabled via the Rasp Pi Wifi to connect to a hotspot. (This enables Online Updates an Backup's)
 
 Use's a Wifi Access Point to talk to all the Rfid scanners,
 Rasp Pi can also have internet access (via its built in Wifi to connect to Internet Hotspot) (for online updates an online backups)
