@@ -37,7 +37,7 @@ Now able to leave the rasp pi in a secure location (within bluetooth distance)
 - GST Calculation Switch (Include GST in price or not)
 
 # How to install 
-- Download a copy of Rasbian onto a SD card. `https://www.raspberrypi.org/software/`
+- Download a copy of 'Rasbian lite' onto a SD card. `https://www.raspberrypi.org/software/`
 ```
 wget https://raw.githubusercontent.com/smartaleciam/playcard/main/Install_PlayCard_Packages.sh
 chmod -R 744 Install_PlayCard_Packages.sh
