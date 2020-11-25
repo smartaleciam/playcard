@@ -33,9 +33,10 @@ The Rasp Pi can also have Internet Access (via its built in Wifi to connect to a
 
 # How to install on a rasp pi with rasbian
 
-...
+
+```
 wget https://raw.githubusercontent.com/smartaleciam/playcard/main/Install_PlayCard_Packages.sh
 chmod -R 744 Install_PlayCard_Packages.sh
 sudo ./Install_PlayCard_Packages.sh
-...
+```
 
