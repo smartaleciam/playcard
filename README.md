@@ -21,11 +21,12 @@ Now able to leave the rasp pi in a secure location (within bluetooth distance)
 - (This enables Online Updates an Backup's)
 
 ### Machine Rfid Scanner System
-- Consists of a Rfid scanner a Oled Screen and a Pixel Ring Indicator, (can also include distance sensor)
+- Consists of a Rfid scanner a Oled Screen and a Pixel Ring Indicator,
+- (Can include distance sensor for Machine in-use or for Advertising)
 - Replaces Exsisting Coin Mech OR Can be used to assist the coin mech in transactions
 
 ### How it all works.. Pure Magic at the moment..More Documentation to come
-- Rfid scanner sences card, sends info via Wifi using MQTT.
+- Rfid scanner scans card, sends info via Wifi using MQTT.
 - System checks Mqtt data for correct MAC address an Card ID against database.
 - System them says if the card has Credit or Not, an Informs the User.
 
