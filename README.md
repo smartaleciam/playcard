@@ -20,7 +20,7 @@ Now able to leave the rasp pi in a secure location (within bluetooth distance)
 - Access to the Internet is enabled via the Rasp Pi Onboard Wifi to connect to any wifi hotspots.
 - (This enables Online Updates an Backup's)
 
-### Machine Rfid System
+### Machine Rfid Scanner System
 - Consists of a Rfid scanner a Oled Screen and a Pixel Ring Indicator, (can also include distance sensor)
 - Replaces Exsisting Coin Mech OR Can be used to assist the coin mech in transactions
 
@@ -29,8 +29,15 @@ Now able to leave the rasp pi in a secure location (within bluetooth distance)
 - System checks Mqtt data for correct MAC address an Card ID against database.
 - System them says if the card has Credit or Not, an Informs the User.
 
+### Extra's Bits
+- Timed Card function (Countdowns from time of purchase)
+- Booking System (Keeps track of Bookings)
+- MemberShip Cards have photo attached in system (via webcam)
+- % Discount System (after a member has spent X dollars in past)
+- GST Calculation Switch (Include GST in price or not)
+
 # How to install 
-- Download a copy of Rasbian onto a SD card.
+- Download a copy of Rasbian onto a SD card. `https://www.raspberrypi.org/software/`
 ```
 wget https://raw.githubusercontent.com/smartaleciam/playcard/main/Install_PlayCard_Packages.sh
 chmod -R 744 Install_PlayCard_Packages.sh
