@@ -20,9 +20,10 @@ Now able to leave the rasp pi in a secure location (within bluetooth distance)
 - Access to the Internet is enabled via the Rasp Pi Onboard Wifi to connect to any wifi hotspots.
 - (This enables Online Updates an Backup's)
 
+### Machine Rfid Scanner System
+
 <img src="http://www.smartaleclights.com.au/programming/2020-05-27%2000.29.44.jpg" align="left" height="100" width="100">
 
-### Machine Rfid Scanner System
 - Consists of a Rfid scanner a Oled Screen and a Pixel Ring Indicator,
 - (Can include distance sensor for Machine in-use or for Advertising)
 - Replaces Exsisting Coin Mech OR Can be used to assist the coin mech in transactions
