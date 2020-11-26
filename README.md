@@ -1,6 +1,9 @@
 # Playcard - A RFID Card Transaction System
 
 Currently Developing a new type of system due to
+
+<img src="http://www.smartaleclights.com.au/programming/RFID%20-%20Main%20Brain%20-%20Scanner%20module%20-%20Wiring%20of%20Prototype.jpg" align="left" height="100" width="100">
+
 1. Loads of wires from the Rasp pi
 2. Needing Rasp pi with rfid scanner close to public (theft of rasp pi would loose everything)
 
