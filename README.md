@@ -21,7 +21,7 @@ Now able to leave the rasp pi in a secure location (within bluetooth distance)
 - (This enables Online Updates an Backup's)
 
 ### Machine Rfid Scanner System
-![Image of Rfid]<img src="http://www.smartaleclights.com.au/programming/2020-05-27%2000.29.44.jpg" align="right" height="100" width="100" >
+<img src="http://www.smartaleclights.com.au/programming/2020-05-27%2000.29.44.jpg" align="center" height="100" width="100" >
 - Consists of a Rfid scanner a Oled Screen and a Pixel Ring Indicator,
 - (Can include distance sensor for Machine in-use or for Advertising)
 - Replaces Exsisting Coin Mech OR Can be used to assist the coin mech in transactions
