@@ -26,6 +26,7 @@ Now able to leave the rasp pi in a secure location (within bluetooth distance)
 - Replaces Exsisting Coin Mech OR Can be used to assist the coin mech in transactions
 - OTA Updateable
 ![Image of Rfid](http://www.smartaleclights.com.au/programming/2020-05-27%2000.29.44.jpg | height=100px)
+<img src="http://www.smartaleclights.com.au/programming/2020-05-27%2000.29.44.jpg" align="left" height="48" width="48" >
 
 ### How it all works.. Pure Magic at the moment.. More Documentation to come
 - Rfid scanner scans the card, sends the info via Wifi using MQTT.
