@@ -24,10 +24,11 @@ Now able to leave the rasp pi in a secure location (within bluetooth distance)
 - Consists of a Rfid scanner a Oled Screen and a Pixel Ring Indicator,
 - (Can include distance sensor for Machine in-use or for Advertising)
 - Replaces Exsisting Coin Mech OR Can be used to assist the coin mech in transactions
+- OTA Updateable
 
-### How it all works.. Pure Magic at the moment..More Documentation to come
-- Rfid scanner scans card, sends info via Wifi using MQTT.
-- System checks Mqtt data for correct MAC address an Card ID against database.
+### How it all works.. Pure Magic at the moment.. More Documentation to come
+- Rfid scanner scans the card, sends the info via Wifi using MQTT.
+- System checks MQTT data for correct MAC address an Card ID against database.
 - System them says if the card has Credit or Not, an Informs the User.
 
 ### Extra's Bits
