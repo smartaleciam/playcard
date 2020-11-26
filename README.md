@@ -5,7 +5,7 @@
 <img src="http://www.smartaleclights.com.au/programming/RFID%20-%20Main%20Brain%20-%20Scanner%20module%20-%20Wiring%20of%20Prototype.jpg" align="left" height="100" width="100">
 
 1. Loads of wires (forming the working of the Rasp pi system)
-2. Big unit an lots of bulky cables (network,hdmi,power,usb) 
+2. Big unit and lots of bulky cables (network,hdmi,power,usb) 
 3. Needing Rasp pi with rfid scanner close to public (theft of rasp pi would loose everything)
 4. 
 
@@ -20,7 +20,7 @@ Some of the different bluetooth module's could be,
 
 Now able to leave the rasp pi in a secure location (within bluetooth distance)
 
-- Access to the Webpage is via https://playcard an it's LAN IP is setup on 192.168.10.1,
+- Access to the Webpage is via https://playcard and it's LAN IP is setup on 192.168.10.1,
 - The System also creates its own DHCP LAN network for RFID Wifi Device's to connect to.
 - Access to the Internet is enabled via the Rasp Pi Onboard Wifi to connect to any wifi hotspots.
 - (This enables Online Updates an Backup's)
@@ -37,7 +37,7 @@ Now able to leave the rasp pi in a secure location (within bluetooth distance)
 ### How it all works.. Pure Magic at the moment.. More Documentation to come
 - Rfid scanner scans the card, sends the info via Wifi using MQTT.
 - System checks MQTT data for correct MAC address an Card ID against database.
-- System them says if the card has Credit or Not, an Informs the User.
+- System them says if the card has Credit or Not, and Informs the User.
 
 ### Extra's Bits
 - Timed Card function (Countdowns from time of purchase)
