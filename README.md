@@ -9,7 +9,7 @@
 3. Needing Rasp pi with rfid scanner close to public (theft of rasp pi would loose everything)
 4. 
 
-Result, use the built in Bluetooth for modules. (Rasp pi 3+ & 4 models)
+####Result, use the built in Bluetooth for modules. (Rasp pi 3+ & 4 models)
 
 Some of the different bluetooth module's could be,
 - Rfid_Scanner (Scan's Rfid Card, Sits next to monitor),
