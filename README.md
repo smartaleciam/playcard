@@ -37,7 +37,7 @@ Now able to leave the rasp pi in a secure location (within bluetooth distance)
 ### How it all works.. Pure Magic at the moment.. More Documentation to come
 - Rfid scanner scans the card, sends the info via Wifi using MQTT.
 - System checks MQTT data for correct MAC address an Card ID against database.
-- System them says if the card has Credit or Not, and Informs the User.
+- System then says if the card has Credit or Not, and Informs the User.
 
 ### Extra's Bits
 - Timed Card function (Countdowns from time of purchase)
