@@ -7,6 +7,7 @@
 1. Loads of wires (forming the working of the Rasp pi system)
 2. Big unit an lots of bulky cables (network,hdmi,power,usb) 
 3. Needing Rasp pi with rfid scanner close to public (theft of rasp pi would loose everything)
+4. 
 
 Result, use the built in Bluetooth for modules. (Rasp pi 3+ & 4 models)
 
