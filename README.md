@@ -55,7 +55,7 @@ sudo ./Install_PlayCard_Packages.sh
 ```
 
 ### About Me
-This is sort of a slow project due to the fact im learning many new things, while developing and faulting along the way.
+This is sort of a slow project due to the fact im learning many new things, while developing and fault finding along the way.
 
 # Rough Costs
 - Each `Rfid Machine Scanner` comes in around $25 each per machine
