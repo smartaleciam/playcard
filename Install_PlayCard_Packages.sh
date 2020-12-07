@@ -197,6 +197,22 @@ DhcpCONFIG="/etc/dhcp/dhcpd.conf"
                 gateway 192.168.10.1
                 " >> /etc/network/interfaces.d/eth0
     fi
+# =============hosts & hostname file=====================
+hostCONFIG="/etc/hosts"
+# if a line containing bluetoothd exists
+    if grep -Fq "127.0.1.1" $hostCONFIG
+    then
+            echo "host exists"
+            sed -i "127.0.1.1		Playcard" $hostCONFIG
+  else
+            echo "PlayCard host added"
+            echo "127.0.1.1		Playcard" >> $hostCONFIG
+    fi
+
+hostsCONFIG="/etc/hostname"
+# Blast contents an replace
+> $hostsCONFIG
+    echo "playcard" >> $hostsCONFIG
 
 # =============MQTT Listening Script=====================
 localCONFIG="/etc/rc.local"
@@ -287,6 +303,7 @@ python3 setup.py install
 #[bluetooth]# exit
 
 # =========================================================
+rm Install_PlayCard_Packages.sh
 
 echo "Install Finished"
 echo "To Access vist http://playcard"
