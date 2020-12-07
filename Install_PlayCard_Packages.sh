@@ -307,6 +307,25 @@ python3 setup.py install
 # =========================================================
 cd /home/pi
 rm Install_PlayCard_Packages.sh
+# =========================================================
 
-echo "Install Finished"
-echo "To Access vist http://playcard"
+# Install Script for Auto Kiosk Mode
+
+# =========================================================
+clear
+echo "Do you Wish to Reboot Now to finish the Install Y/N"
+read answer
+case $answer in
+    Y | YES | y | yes | Yes)
+        echo "Rebooting Now"
+	shutdown -r now
+    ;;
+    N | NO | n | no | No)
+        echo "Install Finished"
+        echo "Please Reboot"
+	echo "To Access via http://playcard"
+        ;;
+    *)
+esac
+
+break
