@@ -204,7 +204,7 @@ hostCONFIG="/etc/hosts"
     if grep -Fq "127.0.1.1" $hostCONFIG
     then
             echo "host exists"
- 	    sed -i '/127.0.1.1/d'
+ 	    sed -i '/127.0.1.1/d' $hostCONFIG
 	    echo "127.0.1.1		Playcard" >> $hostCONFIG
   else
             echo "PlayCard host added"
