@@ -19,7 +19,7 @@ unzip main.zip
 rm main.zip
 cd playcard-main
 
-rsync -avx html /var/www/html
+rsync -avx html /var/www/
 #ls -lh /var/www/
 chown -R pi:www-data /var/www/html/
 chmod -R 770 /var/www/html/
