@@ -40,7 +40,7 @@ case $answer in
         mysql -u root -e "create database playcard"
         mysql -u root -e "create user pi@localhost identified by 'smartalec'"
         mysql -u root -e "GRANT ALL PRIVILEGES ON playcard.* TO pi@localhost IDENTIFIED BY 'smartalec'"
-        mysql -u root -p --execute="playcard playcard.sql; \q"
+        mysql -u root -p --execute="playcard < playcard.sql; \q"
         mysql -u root -e "FLUSH PRIVILEGES"
     ;;
     N | NO | n | no | No)
