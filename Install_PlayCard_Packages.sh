@@ -205,10 +205,10 @@ hostCONFIG="/etc/hosts"
     then
             echo "host exists"
  	    sed -i '/127.0.1.1/d' $hostCONFIG
-	    echo "127.0.1.1		Playcard" >> $hostCONFIG
+	    echo "127.0.1.1	Playcard" >> $hostCONFIG
   else
             echo "PlayCard host added"
-            echo "127.0.1.1		Playcard" >> $hostCONFIG
+            echo "127.0.1.1	Playcard" >> $hostCONFIG
     fi
 
 hostsCONFIG="/etc/hostname"
