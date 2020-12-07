@@ -198,12 +198,14 @@ DhcpCONFIG="/etc/dhcp/dhcpd.conf"
                 " >> /etc/network/interfaces.d/eth0
     fi
 # =============hosts & hostname file=====================
+
 hostCONFIG="/etc/hosts"
 # if a line containing bluetoothd exists
     if grep -Fq "127.0.1.1" $hostCONFIG
     then
             echo "host exists"
-            sed -i "127.0.1.1		Playcard" $hostCONFIG
+ 	    sed -i '/127.0.1.1/d'
+	    echo "127.0.1.1		Playcard" >> $hostCONFIG
   else
             echo "PlayCard host added"
             echo "127.0.1.1		Playcard" >> $hostCONFIG
