@@ -305,6 +305,7 @@ python3 setup.py install
 #[bluetooth]# exit
 
 # =========================================================
+cd /home/pi
 rm Install_PlayCard_Packages.sh
 
 echo "Install Finished"
