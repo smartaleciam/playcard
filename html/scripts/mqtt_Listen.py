@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # loaded from file location /etc/rc.local
 
 import paho.mqtt.client as mqtt
