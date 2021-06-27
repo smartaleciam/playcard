@@ -2,7 +2,7 @@
 
 ##### Currently Developing a new type of system due to
 
-<img src="http://www.smartaleclights.com.au/programming/RFID%20-%20Main%20Brain%20-%20Scanner%20module%20-%20Wiring%20of%20Prototype.jpg" align="left" height="100" width="100">
+<img src="https://www.smartaleclights.com/programming/RFID%20-%20Main%20Brain%20-%20Scanner%20module%20-%20Wiring%20of%20Prototype.jpg" align="left" height="100" width="100">
 
 1. Loads of wires (forming the working of the Rasp pi system)
 2. Big unit and lots of bulky cables (network,hdmi,power,usb) 
@@ -27,7 +27,7 @@ Now able to leave the rasp pi in a secure location (within bluetooth distance)
 
 ### Machine Rfid Scanner System
 
-<img src="http://www.smartaleclights.com.au/programming/2020-05-27%2000.29.44.jpg" align="left" height="100" width="100">
+<img src="https://www.smartaleclights.com/programming/2020-05-27%2000.29.44.jpg" align="left" height="100" width="100">
 
 - Consists of a Rfid scanner a Oled Screen and a Pixel Ring Indicator,
 - (Can include distance sensor for Machine in-use or for Advertising)
